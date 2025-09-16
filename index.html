@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbarContainer">
+    <a href="#" class="headerlogo">Dev<span>Portfolio</span></a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="#home" class="navlink">Home</a>
+      <a href="#about" class="navlink">About</a>
+      <a href="#projects" class="navlink">Projects</a>
+      <a href="#skills" class="navlink">Skills</a>
+      <a href="#contact" class="navlink">Contact</a>
+
+      <!-- exit button -->
+      <button class="closeBtn" id="closeBtn">Exit</button>
+    </div>
+
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+
+<!--Hero Section number --2-->
+
+<section class="heroSection" id="home">
+    <div class="heroContainer">
+        <div class="heroText">
+            <h1 class="heroTitle">Hi, I'm <span>Nazar</span></h1>
+            <h2 class="heroSubtitle">QA Analyst</h2>
+            <div class="heroButtons">
+                <a href="#projects" class="cta-btn cta-btn-primary">My work</a>
+                <a href="#contact" class="cta-btn cta-btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- About section -->
+<section class="aboutSection" id="about">
+  <div class="aboutContainer">
+    <div class="aboutHeader">
+      <h2 class="aboutTitle">About <span>Me</span></h2>
+      <div class="aboutDivider"></div>
+      <p class="aboutSubText">Quality isn’t a feature — it’s the foundation</p>
+    </div>
+
+    <!-- Content -->
+<div class="aboutContent">
+  <!-- Left Column -->
+  <div class="aboutText">
+    <h3 class="aboutSubheading">Who I Am</h3>
+    <p>
+      QA Specialist with over 2+ years of experience in manual and automated testing |
+      Expert in Playwright, Selenium, Postman, Python, SQL, and API testing |
+      Successfully cut regression time by 55% through automation |
+      Skilled in building scalable UI test frameworks with JavaScript and Node.js |
+      Strong knowledge of Agile/Scrum practices, bug triaging, and cross-team collaboration |
+      Solid technical support background with a focus on system troubleshooting and user satisfaction.
+    </p>
+<a href="Nazar%20Lesiuk_%D0%A1V.pdf" class="cta-btn cta-btn-primary" target="_blank">
+  View CV <i class="fas fa-eye ms-2"></i>
+</a>
+
+
+  </div>
+
+  <!-- Right Grid -->
+  <div class="aboutCards">
+    <div class="aboutCard">
+      <i class="fas fa-medal aboutIcon" style="color: #10b981;"></i>
+      <h4>Experience</h4>
+      <p>2+ years working</p>
+    </div>
+
+    <div class="aboutCard">
+      <i class="fas fa-keyboard aboutIcon" style="color: #7c3aed;"></i>
+      <h4>Automating Testing</h4>
+      <p>Playwright / Selenium</p>
+    </div>
+
+    <div class="aboutCard">
+      <i class="fas fa-gears aboutIcon" style="color: #f59e0b;"></i>
+      <h4>Manual Testing</h4>
+      <p>Black Box / White Box</p>
+    </div>
+
+    <div class="aboutCard">
+      <i class="fas fa-code aboutIcon" style="color: #ef4444;"></i>
+      <h4>Languages</h4>
+      <p>Python / JavaScript</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Project Section-->
+<section id="projects" class="projectSection">
+  <div class="projectContainer">
+    <!-- Heading -->
+    <div class="projectHeader">
+      <h2 class="projectTitle">My <span>Projects</span></h2>
+      <div class="projectDivider"></div>
+      <!-- <p class="projectSubtext">A selection of my recent works</p> -->
+    </div>
+
+    <!-- Project grid -->
+    <div class="projectGrid">
+      <!-- Project 1 -->
+      <div class="projectCard">
+        <div class="projectImg">
+          <img src="python.png" alt="E-Commerce project">
+        </div>
+        <div class="projectTags">
+          <span class="projectTag tag-purple">Python</span>
+          <span class="projectTag tag-slate">Pytest</span>
+        </div>
+        <h3 class="projectName">Auto Tests</h3>
+        <p class="projectDescription">In Process</p>
+        <div class="projectLinks">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="" target="_blank">CodeSource <i class="fas fa-external-link-alt"></i></a>
+
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="projectCard">
+        <div class="projectImg">
+          <img src="Qa.png" alt="Documentation project">
+        </div>
+        <div class="projectTags">
+          <span class="projectTag tag-blue">JavaScript</span>
+          <span class="projectTag tag-white">Cypress</span>
+        </div>
+        <h3 class="projectName">Documentation Example</h3>
+        <p class="projectDescription">In process</p>
+        <div class="projectLinks">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#">Documentation <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="projectCard">
+        <div class="projectImg">
+          <img src="JS.png" alt="JavaScript Auto Tests">
+        </div>
+        <div class="projectTags">
+          <span class="projectTag tag-amber">JavaScript</span>
+          <span class="projectTag tag-slate">Playwright</span>
+    
+        </div>
+        <h3 class="projectName">JavaScript Auto Tests</h3>
+        <p class="projectDescription">A collection of Auto Tests.</p>
+        <div class="projectLinks">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/Nazar7879/EF-Connect-UI" target="_blank" rel="noopener noreferrer">
+            View Tests <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="cta-bth projectCta">
+        <a href="AllProjects.html" class="cta-bth cta-btn-outline">
+            View All Projects <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+
+<!-- Skills Section -->
+<section id="skills" class="skillSection">
+  <div class="skillContainer">
+    <div class="skillHeader">
+      <h2 class="skillTittle">My <span>Skills</span></h2>
+      <div class="skillDivider"></div>
+      <!-- <p class="skillSubtext">Technologies and tools</p> -->
+    </div>
+
+    <!-- Skills group -->
+    <div class="skillsGroup">
+      <h3 class="skillCategory">Languages & Tools</h3>
+      <div class="skillGrid">
+
+        <div class="skillCard">
+          <i class="fab fa-python skillIcon" style="color:#3776AB;"></i>
+          <span>Python</span>
+          <div class="skillBar">
+            <div style="width: 95%; background: #3776AB;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-js skillIcon" style="color:#f7df1e;"></i>
+          <span>JavaScript</span>
+          <div class="skillBar">
+            <div style="width: 90%; background: #f7df1e;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-node-js skillIcon" style="color:#539E43;"></i>
+          <span>Node.js</span>
+          <div class="skillBar">
+            <div style="width: 85%; background: #539E43;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-html5 skillIcon" style="color:#E34F26;"></i>
+          <span>HTML</span>
+          <div class="skillBar">
+            <div style="width: 95%; background: #E34F26;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-css3-alt skillIcon" style="color:#1572B6;"></i>
+          <span>CSS</span>
+          <div class="skillBar">
+            <div style="width: 90%; background: #1572B6;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-git-alt skillIcon" style="color:#F05032;"></i>
+          <span>Git</span>
+          <div class="skillBar">
+            <div style="width: 90%; background: #F05032;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-github skillIcon" style="color:#f8f9fa;"></i>
+          <span>GitHub</span>
+          <div class="skillBar">
+            <div style="width: 95%; background: #181717;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-linux skillIcon" style="color:#FCC624;"></i>
+          <span>Linux</span>
+          <div class="skillBar">
+            <div style="width: 90%; background: #FCC624;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-windows skillIcon" style="color:#00ADEF;"></i>
+          <span>Windows</span>
+          <div class="skillBar">
+            <div style="width: 95%; background: #00ADEF;"></div>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <i class="fab fa-apple skillIcon" style="color:#999999;"></i>
+          <span>macOS</span>
+          <div class="skillBar">
+            <div style="width: 85%; background: #999999;"></div>
+          </div>
+        </div>
+
+      </div> 
+    </div> 
+  </div> 
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contactSection">
+    <div class="contactContainer">
+        <div class="contactHeader">
+            <h2 class="contactTitle">Get in <span>Touch</span></h2>
+            <div class="contactDivider"></div>
+            <p class="contactSubText">Have a project in mind or want to collaborate? I'd love to hear from you !</p>
+        </div>
+        <div class="contactContent">
+            <!-- contact form -->
+<form class="contactForm" id="contactForm" action="https://formspree.io/f/xzzvqzvr" method="POST">
+  <div class="contactGrid">
+    <div>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+  </div>
+  <div>
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
+  <div>
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+</form>
+             <!-- contact info -->
+    
+<div class="contactInfo">
+
+  <div class="contactCard">
+    <i class="fas fa-envelope"></i>
+    <div>
+      <h3>Email</h3>
+      <p>nazarlesiuk@yahoo.com</p>
+    </div>
+  </div>
+
+  <div class="contactCard">
+    <i class="fas fa-phone"></i>
+    <div>
+      <h3>Phone</h3>
+      <p>+1 709-853-1320</p>
+    </div>
+  </div>
+
+  <div class="contactCard">
+    <i class="fas fa-map-marker-alt"></i>
+    <div>
+      <h3>Location</h3>
+      <p>St. John's, Newfoundland, Canada</p>
+    </div>
+  </div>
+
+</div>
+
+</section>
+<!-- foter section -->
+ <footer class="footer">
+    <div class="footerContainer">
+       <div class="footerTop">
+        <div>
+            <a href="#" class="footerLogo">Portfolio</a>
+            <p>@ 2025 Portfolio</p>
+        </div>
+         <div class="footerSosials">
+            <a href="https://www.linkedin.com/in/nazar-lesiuk/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><i class="fab fa-linkedin "></i></a>
+            <a href="https://github.com/Nazar7879" target="_blank" rel="noopener noreferrer"  aria-label="Github"> <i class="fab fa-github"  style="color: #f8f9fa;"></i></a>
+         </div>
+          <a href="#home" class="footerTopLink">
+            Back to top <i class="fas fa-arrow-up"></i>
+          </a>
+       </div> 
+    </div>
+ </footer>
+
+<script src="script.js"></script> 
+<script src="contact.js"></script> 
+</body>
+</html>
