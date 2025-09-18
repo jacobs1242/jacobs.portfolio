@@ -179,6 +179,30 @@
                 <!-- The phone number, initially hidden -->
                 <p id="phoneNumber" class="text-xl font-bold text-gray-900 hidden">+91 8589951242</p>
                 </div>
+                    <script>
+        const showNumberBtn = document.getElementById('showNumberBtn');
+        const phoneNumber = document.getElementById('phoneNumber');
+        const contactModal = document.getElementById('contactModal');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+
+        // Show the modal when the button is clicked
+        showNumberBtn.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+        });
+
+        // Hide the modal and show the phone number if confirmed
+        confirmBtn.addEventListener('click', () => {
+            contactModal.classList.add('hidden');
+            phoneNumber.classList.remove('hidden');
+            showNumberBtn.classList.add('hidden'); // Optional: hide the button once the number is shown
+        });
+
+        // Hide the modal if canceled
+        cancelBtn.addEventListener('click', () => {
+            contactModal.classList.add('hidden');
+        });
+    </script>
                 <div class="mt-8 flex justify-center space-x-4">
                     <a href="https://www.linkedin.com/in/jacobsanthosh" target="_blank" class="text-gray-600 hover:text-teal-600 transition-colors duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
