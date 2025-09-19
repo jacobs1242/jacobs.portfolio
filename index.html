@@ -19,13 +19,6 @@
     </style>
 </head>
 <body>
-    <script>
-        // Check if the page is being reloaded
-        if (performance.navigation.type === 1) {
-            // Redirect to the home page URL
-            window.location.href = 'https://jacobs1242.github.io/jacobs.portfolio/';
-        }
-    </script>
     <!-- Navigation Header -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -188,15 +181,6 @@
                             </button>
                         </div>
                     </form>
-                    <div id="loadingMessage" class="hidden text-center mt-4 text-sm text-gray-500">
-                        Submitting your enquiry...
-                    </div>
-                    <div id="successMessage" class="hidden text-center mt-4 text-sm font-medium text-green-600 p-3 bg-green-50 rounded-lg">
-                        Thank you for your enquiry.
-                    </div>
-                    <div id="errorMessage" class="hidden text-center mt-4 text-sm font-medium text-red-600 p-3 bg-red-50 rounded-lg">
-                        An error occurred. Please try again.
-                    </div>
                 </div>
             </div>
         </section>
@@ -212,21 +196,12 @@
     <!-- JavaScript for form submission and mobile menu -->
     <script>
         // REPLACE THIS URL WITH YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw65-zeOVAnNzyRMAvrgwHPPdmSs3Ryxh0Qr_z_-38/dev"; 
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby0WVD7PKr7MFR2baNVBbXi4r5GYnu0fHQkPrJiDDUdngYcSQeCcSNNUwDssYcRCgmA/exec"; 
 
         document.getElementById('enquiryForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const form = event.target;
-            const loadingMessage = document.getElementById('loadingMessage');
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
-
-            // Reset messages and show loading
-            successMessage.classList.add('hidden');
-            errorMessage.classList.add('hidden');
-            loadingMessage.classList.remove('hidden');
-
             const formData = new FormData(form);
             
             fetch(SCRIPT_URL, {
@@ -234,18 +209,12 @@
                 body: formData
             })
             .then(response => {
-                loadingMessage.classList.add('hidden');
                 if (response.ok) {
-                    successMessage.classList.remove('hidden');
                     form.reset();
-                } else {
-                    errorMessage.classList.remove('hidden');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                loadingMessage.classList.add('hidden');
-                errorMessage.classList.remove('hidden');
             });
         });
 
