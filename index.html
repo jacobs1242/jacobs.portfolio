@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE ahtml>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -181,6 +181,7 @@
                             </button>
                         </div>
                     </form>
+                    <div id="messageBox" class="hidden text-center mt-4 text-sm font-medium p-3 rounded-lg"></div>
                 </div>
             </div>
         </section>
@@ -198,10 +199,22 @@
         // REPLACE THIS URL WITH YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby0WVD7PKr7MFR2baNVBbXi4r5GYnu0fHQkPrJiDDUdngYcSQeCcSNNUwDssYcRCgmA/exec"; 
 
-        document.getElementById('enquiryForm').addEventListener('submit', function(event) {
+        const form = document.getElementById('enquiryForm');
+        const messageBox = document.getElementById('messageBox');
+
+        function showMessage(message, isSuccess) {
+            messageBox.textContent = message;
+            messageBox.classList.remove('hidden', 'bg-red-50', 'text-red-600', 'bg-green-50', 'text-green-600');
+            if (isSuccess) {
+                messageBox.classList.add('bg-green-50', 'text-green-600');
+            } else {
+                messageBox.classList.add('bg-red-50', 'text-red-600');
+            }
+        }
+
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const form = event.target;
             const formData = new FormData(form);
             
             fetch(SCRIPT_URL, {
@@ -211,10 +224,14 @@
             .then(response => {
                 if (response.ok) {
                     form.reset();
+                    showMessage('Form submitted successfully!', true);
+                } else {
+                    showMessage('An error occurred. Please try again.', false);
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
+                showMessage('An error occurred. Please try again.', false);
             });
         });
 
