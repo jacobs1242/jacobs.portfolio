@@ -124,7 +124,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Skills Section -->
         <section id="skills" class="section-padding bg-white">
             <div class="container mx-auto px-4 max-w-4xl">
@@ -183,10 +182,6 @@
                             <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
                             <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 transition duration-150 ease-in-out"></textarea>
                         </div>
-                        <div>
-                            <label for="file" class="block text-sm font-medium text-gray-700">Attach a File (Optional)</label>
-                            <input type="file" id="file" name="file" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100 cursor-pointer transition duration-150 ease-in-out" />
-                        </div>
                         <div class="flex items-center justify-end">
                             <button type="submit" class="w-full sm:w-auto px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition duration-150 ease-in-out">
                                 Submit Enquiry
@@ -217,7 +212,7 @@
     <!-- JavaScript for form submission and mobile menu -->
     <script>
         // REPLACE THIS URL WITH YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx4yxLm51ffJUB_sizdIo97UnEyw9Ftor6aQ3JBERfJq7R1yHdHoEq-MgQ2jc_YB_Px/exec"; 
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx4yxLm51ffJUB-sizdIo97UnEyw9Ftor6aQ3JBERfJq7R1yHdHoEq-MgQ2jc_YB_Px/exec"; 
 
         document.getElementById('enquiryForm').addEventListener('submit', function(event) {
             event.preventDefault();
